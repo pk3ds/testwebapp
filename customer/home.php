@@ -37,15 +37,21 @@
 		<div id="theCarousel" class="carousel slide" data-ride="carousel"><!--Carousel is a component for cycling through announcements, like a slideshow.-->
 			<div class="carousel-inner">
 			
-				<?php while($row = mysqli_fetch_assoc($result)):?>
-				
 				<div class="carousel-item active">
 					<!--Banner is a visible on all screen size device.-->
-					<img class="d-block w-100" src="../file_store/announcement/<?php echo $row["File"]; ?>" alt="banner">
+					<img class="d-block w-100" src="../file_store/announcement/banner1.jpg" alt="banner">
 				</div>
 				
-				<?php endwhile;
-					mysqli_close($conn); ?>	
+				<div class="carousel-item">
+					<!--Banner is a visible on all screen size device.-->
+					<img class="d-block w-100" src="../file_store/announcement/banner2.png" alt="banner">
+				</div>
+				
+				<div class="carousel-item">
+					<!--Banner is a visible on all screen size device.-->
+					<img class="d-block w-100" src="../file_store/announcement/banner3.png" alt="banner">
+				</div>
+				
 			</div>
 			<a class="carousel-control-prev" href="#theCarousel" role="button" data-slide="prev"><!--Previous button on carousel-->
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
