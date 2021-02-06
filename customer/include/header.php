@@ -57,14 +57,14 @@
 							$toggle = "../account/logout.php";
 						} ?>
 						<a class="nav-link" href="<?php echo $toggle; ?>" data-toggle="<?php echo $pressed; ?>"><?php echo $status ?></a>
-						<div class="dropdown-menu" style="margin-top: 8px; padding: 20px; padding-bottom: 20px; padding-left: 50px; padding-right: 50px;">
+						<div class="dropdown-menu" style="margin-top: 8px; padding: 20px; padding-bottom: 20px; padding-left: 55px; padding-right: 55px;">
 						<form class="form-horizontal" action="../account/login2.php" method="post" accept-charset="UTF-8">
-							<input id="username" class="form-control login" type="text" name="username" placeholder="Username.." />
-							<input id="password" class="form-control login" type="password" name="password" placeholder="Password.."/>
+							<input id="username" class="form-control login" type="text" name="username" placeholder="Username.." size="25" />
+							<input id="password" class="form-control login" type="password" name="password" placeholder="Password.." size="25"/>
 							<input class="btn btn-info" style="margin-top: 5px;" type="submit" name="submit" value="login" />
 						  </form>
 							<form class="form-horizontal" action="../account/register.php" method="get">
-								<input class="btn btn-info" style="margin-top: 5px;" type="submit" name="submit" value="Register" />
+								<input class="btn btn-info" style="margin-top: 0px;margin-left: 2px" type="submit" name="submit" value="Register" />
 							</form>
 						  </div>
 					  </li>
