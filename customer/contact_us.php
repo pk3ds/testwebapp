@@ -57,7 +57,7 @@
 		<!--Form for submitting a request-->
 		<form action="inqueries.php" method="POST">
 		<div class="container">
-			<h4 class="text-center">Any inqueries:</h4><br/>
+			<h4 class="text-center">Any inqueries12345:</h4><br/>
 			<!-- colour for background-->
 				<div class="p-3 mb-2 bg-light text-dark">
 					<nav class="text-left">
