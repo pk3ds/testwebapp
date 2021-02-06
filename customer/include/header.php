@@ -63,7 +63,7 @@
 							<input id="password" class="form-control login" type="password" name="password" placeholder="Password.."/>
 							<input class="btn btn-info" style="margin-top: 5px;" type="submit" name="submit" value="login" />
 						  </form>
-							<form class="form-horizontal" action="../account/register.php" method="post">
+							<form class="form-horizontal" action="../account/register.php" method="get">
 								<input class="btn btn-info" style="margin-top: 5px;" type="submit" name="submit" value="Register" />
 							</form>
 						  </div>
