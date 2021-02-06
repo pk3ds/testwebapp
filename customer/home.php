@@ -7,6 +7,8 @@
 	
 	$sql = "SELECT * FROM announcement WHERE Status = 'Accepted' AND CURRENT_TIMESTAMP < End_Date ";
 	$result = mysqli_query($conn, $sql);
+	$isBannerActive = false;
+
 	if (mysqli_num_rows($result) > 0)
 		
 ?>
@@ -36,14 +38,9 @@
 		<div id="theCarousel" class="carousel slide" data-ride="carousel"><!--Carousel is a component for cycling through announcements, like a slideshow.-->
 			<div class="carousel-inner">
 			
-				<div class="carousel-item active>
-					<!--Banner is a visible on all screen size device.-->
-					<img class="d-block w-100" src="../file_store/announcement/banner1.jpg" alt="banner">
-				</div>
-				
 				<?php while($row = mysqli_fetch_assoc($result)):?>
 				
-				<div class="carousel-item >
+				<div class="carousel-item <?php if($isBannerActive == false){ echo "active"; $isBannerActive = true} ?>">
 					<!--Banner is a visible on all screen size device.-->
 					<img class="d-block w-100" src="../file_store/announcement/<?php echo $row["File"]; ?>" alt="banner">
 				</div>
