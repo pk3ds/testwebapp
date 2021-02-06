@@ -14,7 +14,7 @@ $inquiryid = $_POST['inquiryid'];
 $sql = "DELETE FROM inquiry WHERE ID = '$inquiryid'"; 
 
 if (mysqli_query($conn, $sql)) {
-	include('viewinquiries.php');
+	include('viewInqueries.php');
 } else {
 	echo "$id";
     echo "Error deleting record";
