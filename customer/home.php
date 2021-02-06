@@ -37,13 +37,9 @@
 		<div id="theCarousel" class="carousel slide" data-ride="carousel"><!--Carousel is a component for cycling through announcements, like a slideshow.-->
 			<div class="carousel-inner">
 			
-				<div class="carousel-item active">
-					<!--Banner is a visible on all screen size device.-->
-					<img class="d-block w-100" src="../file_store/announcement/banner2.png" alt="banner">
-				</div>
 				<?php while($row = mysqli_fetch_assoc($result)):?>
 				
-				<div class="carousel-item">
+				<div class="carousel-item active">
 					<!--Banner is a visible on all screen size device.-->
 					<img class="d-block w-100" src="../file_store/announcement/<?php echo $row["File"]; ?>" alt="banner">
 				</div>
