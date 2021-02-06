@@ -40,7 +40,7 @@
 				<?php while($row = mysqli_fetch_assoc($result)):?>
 				
 				<div class="carousel-item <?php if ($currentNum == $row){
-					echo active;
+					echo "active";
 				}else{
 					$currentNum++;
 				}?>">
