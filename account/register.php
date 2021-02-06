@@ -14,7 +14,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
   }
   exit;
 }
- 
+
 // Define variables and initialize with empty values
 $name = $username = $email = $confirm_email = $password = $confirm_password = "";
 $name_err = $username_err = $email_err = $confirm_email_err = $password_err = $confirm_password_err = "";
@@ -22,10 +22,13 @@ $name_err = $username_err = $email_err = $confirm_email_err = $password_err = $c
 if(isset($_GET['username'])) {
   $username=$_GET['username'];
 }
- 
+else {
+  $username = "";
+}
+
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
+
     // Validate username
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter an username.";
@@ -48,19 +51,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         } catch (\Throwable $th) {
           echo $th . "Oops! Something went wrong. Please try again later.";
         }
-        
+
         /*if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "s", $param_email);
-            
+
             // Set parameters
             $param_email = trim($_POST["email"]);
-            
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 /* store result */
                 /*mysqli_stmt_store_result($stmt);
-                
+
                 if(mysqli_stmt_num_rows($stmt) == 1){
                     $email_err = "This email is already taken.";
                     header("location: login.php");
@@ -71,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "Oops! Something went wrong. Please try again later.";
             }
         }*/
-         
+
         // Close statement
         //mysqli_stmt_close($stmt);
     }
@@ -120,19 +123,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
       // Prepare a select statement
       /*$sql = "SELECT username FROM users WHERE username = ?";
-      
+
       if($stmt = mysqli_prepare($link, $sql)){
           // Bind variables to the prepared statement as parameters
           mysqli_stmt_bind_param($stmt, "s", $param_username);
-          
+
           // Set parameters
           $param_username = trim($_POST["username"]);
-          
+
           // Attempt to execute the prepared statement
           if(mysqli_stmt_execute($stmt)){
               /* store result */
               /*mysqli_stmt_store_result($stmt);
-              
+
               if(mysqli_stmt_num_rows($stmt) == 1){
                   $username_err = "This username is already taken.";
                   header("location: login.php");
@@ -143,12 +146,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               echo "Oops! Something went wrong. Please try again later.";
           }
       }
-       
+
       // Close statement
       mysqli_stmt_close($stmt);*/
     //  $statement = null;
   //}
-  
+
 
     // Validate confirm email
     if(empty(trim($_POST["confirm_email"]))){
@@ -162,30 +165,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     // Check name if not empty
     if(empty(trim($_POST["name"]))){
-      $name_err = "Please enter your name.";     
+      $name_err = "Please enter your name.";
     } else {
       $name = trim($_POST["name"]);
     }
-    
+
     // Validate password
     if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter a password.";     
+        $password_err = "Please enter a password.";
     } elseif(strlen(trim($_POST["password"])) < 6){
         $password_err = "Password must have atleast 6 characters.";
     } else{
         $password = trim($_POST["password"]);
     }
-    
+
     // Validate confirm password
     if(empty(trim($_POST["confirm_password"]))){
-        $confirm_password_err = "Please confirm password.";     
+        $confirm_password_err = "Please confirm password.";
     } else{
         $confirm_password = trim($_POST["confirm_password"]);
         if(empty($password_err) && ($password != $confirm_password)){
             $confirm_password_err = "Password did not match.";
         }
     }
-    
+
     // Check input errors before inserting in database
     if(empty($email_err) && empty($password_err) && empty($confirm_password_err) && empty($name_err) && empty($username_err) && empty($confirm_email_err)){
         // Prepare an insert statement
@@ -218,23 +221,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           } else {
             echo "Error in inserting in database";
           }
-        
+
         } catch (\Throwable $th) {
           echo $th->getMessage() . "Something went wrong. Please try again later.";
         }
       }
-      
-         
+
+
         /*if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "ssss", $param_username, $param_password, $param_name, $param_email);
-            
+
             // Set parameters
             $param_email = $email;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             $param_name = $name;
             $param_username = $username;
-            
+
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Redirect to login page
@@ -243,11 +246,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "Something went wrong. Please try again later.";
             }
         }
-         
+
         // Close statement
         mysqli_stmt_close($stmt);
     }
-    
+
     // Close connection
     mysqli_close($link);*/
 }
@@ -271,12 +274,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <!-- Bootstrap-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
-  
+
   <!-- Bootstrap JavaScript-->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
-  
+
 
 </head>
 <!-- make the background to blue-->
