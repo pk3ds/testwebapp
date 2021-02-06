@@ -93,7 +93,7 @@ if (mysqli_num_rows($result) > 0)
 	 </form>
 	 <form method="post" action="deletequote.php">
 	 <input type="hidden" name="quoteid" value="<?php echo $row["ID"];  ?>">
-	 <td><button name="deletequote" type="submit" class="btn"></button></td>
+	 <td><input name="deletequote" type="submit" value="Delete Quote" class="btn"></td>
 	 </form>
 	 </tr>
 	 <?php endwhile; 
