@@ -57,7 +57,7 @@
 							$toggle = "../account/logout.php";
 						} ?>
 						<a class="nav-link" href="<?php echo $toggle; ?>" data-toggle="<?php echo $pressed; ?>"><?php echo $status ?></a>
-						<div class="dropdown-menu" style="margin-top: 8px; padding: 20px; padding-bottom: 20px; padding-left: 30px; padding-right: 30px;">
+						<div class="dropdown-menu" style="margin-top: 8px; padding: 20px; padding-bottom: 20px; padding-left: 50px; padding-right: 50px;">
 						<form class="form-horizontal" action="../account/login2.php" method="post" accept-charset="UTF-8">
 							<input id="username" class="form-control login" type="text" name="username" placeholder="Username.." />
 							<input id="password" class="form-control login" type="password" name="password" placeholder="Password.."/>
