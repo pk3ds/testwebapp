@@ -47,7 +47,7 @@
 						</div>
 						<!-- Error Template-->
 						
-						<label  class="col-sm-5 col-form-label">Product Type123:</label>
+						<label  class="col-sm-5 col-form-label">Product Type:</label>
 							<!-- Bootstrap: collumn width is set to 6 when screen size is smaller than 576px, p-2 = padding is set to 2 -->
 							<div class="col-sm-6 p-2">
 							 <input type="radio" name="product_type"  value="Existing"> Existing <br>
@@ -191,7 +191,7 @@
 						
 						<div class="container-fluid">
 							<input type="submit" name="submit" class="btn btn-primary float-right btn-sm">
-							<a href="home.html" class="btn btn-info btn-sm float-left" role="button">Back</a>
+							<a href="home.php" class="btn btn-info btn-sm float-left" role="button">Back</a>
 						</div>
 					</div>
 					
