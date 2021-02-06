@@ -64,7 +64,7 @@
 							<input class="btn btn-info" style="margin-top: 5px;" type="submit" name="submit" value="login" />
 						  </form>
 							<form class="form-horizontal" action="../account/register.php" method="get">
-								<input class="btn btn-info" style="margin-top: 0px;margin-left: 20px" type="submit" name="submit" value="Register" />
+								<input class="btn btn-info" style="margin-top: 0px;margin-left: 5px" type="submit" name="submit" value="Register" />
 							</form>
 						  </div>
 					  </li>
