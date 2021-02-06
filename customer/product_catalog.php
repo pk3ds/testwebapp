@@ -379,6 +379,9 @@
 						<img src="../img/upload.jpg" class="img-fluid" alt="Upload icon"/> Upload your file for printing.
 					</a>
                     <hr class="d-block" />
+					<!--Share button -->
+					<h3>Share this product!</h3>
+					<hr class="d-block" />
                 </div>
 				<!--End-->
             </div>
