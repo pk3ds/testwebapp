@@ -7,7 +7,7 @@
 	
 	$sql = "SELECT * FROM announcement WHERE Status = 'Accepted' AND CURRENT_TIMESTAMP < End_Date ";
 	$result = mysqli_query($conn, $sql);
-	$currentNum = 1;
+	$currentNum = 0;
 	if (mysqli_num_rows($result) > 0)
 		
 ?>
