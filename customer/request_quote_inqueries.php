@@ -2,7 +2,6 @@
 require_once "../include/connection-config.inc.php";
 session_start();
 $userID = $_SESSION["username"];
-$userID = 1234
 ?>
 
 <?php
@@ -77,7 +76,7 @@ if(empty($side_pages)){
 
 		 $INSERT = "INSERT Into Quote(CustomerUserID, Date, Title, Product_Type, Product_Name, Quantity, Shipping, Size, Paper_Type, Side_Pages, Coating,
 		 Color, Lamination, Add_Details, File)
-		 values("$userID",CURRENT_TIMESTAMP,"$title","$product_type","$product_name","$quantity","$shipping","$size","$paper_type","side_pages","$coating","$color","$lamination","$add_details","$name")";
+		 values('$userID',CURRENT_TIMESTAMP,'$title','$product_type','$product_name','$quantity','$shipping','$size','$paper_type','$side_pages','$coating','$color','$lamination','$add_details','$name')";
 		 if(mysqli_query($conn, $sql)){
     	echo "Records added successfully.";
 			} else{
