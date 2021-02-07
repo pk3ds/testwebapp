@@ -62,12 +62,12 @@ if(empty($side_pages)){
 }
 
 
-// if(isset($_POST["submit"]) && !empty($title) &&
-// !empty($product_name) && !empty($quantity) && !empty($size) && !empty($paper_type) && !empty($side_pages)){
+if(isset($_POST["submit"]) && !empty($title) &&
+!empty($product_name) && !empty($quantity) && !empty($size) && !empty($paper_type) && !empty($side_pages)){
 
-	// if(mysqli_connect_error()){
-	// 	die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
-	// }else{
+	if(mysqli_connect_error()){
+		die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
+	}else{
 
 
 		 $name=$_FILES['file']['name'];
@@ -77,7 +77,7 @@ if(empty($side_pages)){
 		 $INSERT = "INSERT Into Quote(CustomerUserID, Date, Title, Product_Type, Product_Name, Quantity, Shipping, Size, Paper_Type, Side_Pages, Coating,
 		 Color, Lamination, Add_Details, File)
 		 values("$userID",CURRENT_TIMESTAMP,"$title","$product_type","$product_name","$quantity","$shipping","$size","$paper_type","side_pages","$coating","$color","$lamination","$add_details","$name")";
-
+		 mysqli_query($conn, $INSERT);
 		// //$SELECT = "SELECT
 		// $INSERT = "INSERT Into quote(CustomerUserID, Date, Title, Product_Type, Product_Name, Quantity, Shipping, Size, Paper_Type, Side_Pages, Coating,
 		// Color, Lamination, Add_Details, File)
@@ -91,8 +91,7 @@ if(empty($side_pages)){
 		// $stmt->close();
 		// $conn->close();
 
-
-	//}
-//}
+		}
+}
 	include('request_quote.php');
 ?>
