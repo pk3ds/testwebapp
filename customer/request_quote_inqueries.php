@@ -62,12 +62,12 @@ if(empty($side_pages)){
 }
 
 
-if(isset($_POST["submit"]) && !empty($title) &&
-!empty($product_name) && !empty($quantity) && !empty($size) && !empty($paper_type) && !empty($side_pages)){
+// if(isset($_POST["submit"]) && !empty($title) &&
+// !empty($product_name) && !empty($quantity) && !empty($size) && !empty($paper_type) && !empty($side_pages)){
 
-	if(mysqli_connect_error()){
-		die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
-	}else{
+	// if(mysqli_connect_error()){
+	// 	die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
+	// }else{
 
 
 		 $name=$_FILES['file']['name'];
@@ -95,7 +95,7 @@ if(isset($_POST["submit"]) && !empty($title) &&
 		// $stmt->close();
 		// $conn->close();
 
-		}
-}
+		//}
+//}
 	include('request_quote.php');
 ?>
