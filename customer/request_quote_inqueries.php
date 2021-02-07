@@ -69,14 +69,13 @@ if(empty($side_pages)){
 	// 	die('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
 	// }else{
 
-
 		 $name=$_FILES['file']['name'];
 		 $temp=$_FILES['file']['tmp_name'];
 		 move_uploaded_file($temp,"../file_store/customer_design/".$name);
 
 		 $INSERT = "INSERT Into Quote(CustomerUserID, Date, Title, Product_Type, Product_Name, Quantity, Shipping, Size, Paper_Type, Side_Pages, Coating,
 		 Color, Lamination, Add_Details, File)
-		 values('$userID',CURRENT_TIMESTAMP,'$title','$product_type','$product_name','$quantity','$shipping','$size','$paper_type','$side_pages','$coating','$color','$lamination','$add_details','$name')";
+		 values('$userID',CURRENT_TIMESTAMP(),'$title','$product_type','$product_name','$quantity','$shipping','$size','$paper_type','$side_pages','$coating','$color','$lamination','$add_details','$name')";
 		 if(mysqli_query($conn, $sql)){
     	echo "Records added successfully.";
 			} else{
