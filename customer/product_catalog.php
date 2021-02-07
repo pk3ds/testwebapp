@@ -368,7 +368,7 @@
 						if(quantityCheck < 10){
 							document.getElementById("displayPrice").innerHTML = "Minimun Quantity Value is 10";
 						}else{
-							document.getElementById("displayPrice").innerHTML = "RM   " + total.toFixed(2);
+							document.getElementById("displayPrice").innerHTML = "RM   600" + total.toFixed(2);
 						}
 					}
 					</script>
