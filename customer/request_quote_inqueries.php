@@ -2,6 +2,7 @@
 require_once "../include/connection-config.inc.php";
 session_start();
 $userID = $_SESSION["username"];
+$userID = "guest";
 ?>
 
 <?php
