@@ -77,7 +77,7 @@ if(empty($side_pages)){
 
 		 $INSERT = "INSERT Into Quote(CustomerUserID, Date, Title, Product_Type, Product_Name, Quantity, Shipping, Size, Paper_Type, Side_Pages, Coating,
 		 Color, Lamination, Add_Details, File)
-		 values(CURRENT_TIMESTAMP,"$title","$product_type","$product_name","$quantity","$shipping","$size","$paper_type","side_pages","$coating","$color","$lamination","$add_details","$name")";
+		 values(CURRENT_TIMESTAMP,"$product_type","$product_name","$quantity","$shipping","$size","$paper_type","side_pages","$coating","$color","$lamination","$add_details","$name")";
 		 if(mysqli_query($conn, $sql)){
     	echo "Records added successfully.";
 			} else{
